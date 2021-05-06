@@ -1,0 +1,43 @@
+/**
+ * A clean theme for reveal.js presentations, similar
+ * to the default theme. The accent color is light blue.
+ *
+ * reveal.js is Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+
+// Include theme-specific fonts
+@import url(https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap);
+
+
+// Override theme settings (see ../template/settings.scss)
+$mainFont: 'Fira Sans', sans-serif;
+$mainColor: rgb(11, 38, 56);
+$headingFont: 'Merriweather', Impact, sans-serif;
+$headingColor: rgb(10, 32, 48);
+$headingTextShadow: none;
+$headingTextTransform: none;
+$backgroundColor: rgb(255, 253, 240);
+$linkColor: rgb(45,150,225);
+$linkColorHover: lighten( $linkColor, 20% );
+$selectionBackgroundColor: #226392;
+$heading1Size: 2.5em;
+$heading2Size: 1.6em;
+$heading3Size: 1.3em;
+$heading4Size: 1.0em;
+
+// Change text colors against dark slide backgrounds
+@include dark-bg-text-color(rgb(255, 253, 240));
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
